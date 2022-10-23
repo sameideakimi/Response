@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* header */
+.header {
+    height: 100px;
+    border-bottom: 1px solid gold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+/* 로고 */
+.header h1 {}
+.header h1 a {
+        color: white;
+}
+/* 메뉴 */
+.header .menu {
+    display: flex;
+}
+.header .menu li {
+    margin: 0 1rem;
+    color: white;
+}
+.header .menu li a {
+    color: white;
+}
+/* sns */
+.header .sns {
+    display: flex;
+}
+.header .sns li {}
+.header .sns li a {
+    margin: 0 0.5vw;
+    font-size: 18px;
+    color: #ddd;
+}
+.header .sns li a i {}
+.header .sub_menu {
+    position: absolute;
+    display: none;
+}
+
+/* main(동영상포함) */
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    /* 요거는 디자인요소 */
+}
+
+main video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    /* 요거는 디자인요소 */
+}
+main .text {
+    position: absolute;
+    left: 6vw;
+    top: 40%;
+    color: pink;
+}
+main .text p {
+    font-size: 4vw;
+}
+main .text ul {
+    display: flex;
+}
+main .text ul li {
+    font-size: 10px;
+    margin-right: 10px;
+    color: skyblue;
+}
+main .text ul li a {}
+main .text ul li a i {}
+main .text ul li a strong {}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    font: 700 14px/1 'arial';
+    /* 웨이트,사이즈,라인헤이트,글씨체 순서
+    웨이트는 생략해도 됨. */
+    color: #ddd;
+    text-align: center;
+    padding: 5vh 5vw;
+}
+@media screen and (max-width:768px) {
+    .header .sub_menu {
+        margin: 0 0.5vw;
+        font-size: 18px;
+        color: #ddd;
+        right: 5vw;
+        display: block;
+    }
+    .header .sns li a {
+        display: none;
+    }
+    .header .menu {
+        display: none;
+    }
+    .header h1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .header div a{
+        color: pink;
+    }
+    .header h1 a {
+        color: pink;
+}
+}
